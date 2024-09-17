@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&display=swap');
+
+html,
+body {
+    font-family: "Inter", "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.selectbox {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+
+.selectbox::after {
+    position: absolute;
+    right: 15px;
+    width: 10px;
+    height: 7px;
+    background-color: #535353;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    content: '';
+    pointer-events: none;
+}
+
+.selectbox select {
+    appearance: none;
+    min-width: 230px;
+    height: 2.8em;
+    padding: .4em calc(.8em + 30px) .4em .8em;
+    border: 1px solid #d0d0d0;
+    border-radius: 3px;
+    background-color: #fff;
+    color: #333333;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.textbox {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #d0d0d0;
+    border-radius: 3px;
+    color: #333;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.textbox::placeholder {
+    color: #999;
+}
+
+.textarea {
+    border-radius: 3px;
+    color: #333;
+    font-size: 1em;
+    height: fit-content;
+}
+
+.textarea .simple-editor,
+.formula-editor {
+    font-size: 17px;
+    height: fit-content;
+}
+
+.answer {
+    position: relative;
+    background-color: #ffe6e6;
+}
+
+.answer .ql-toolbar {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    border: none;
+    z-index: 1000;
+}
+
+ol {
+    padding: 0 !important;
+    margin: .5rem 0 !important;
+}
+
+.ql-tooltip[data-mode='formula'] {
+    z-index: 1000000;
+}
+
+.mathquill4quill-mathquill-input {
+    font-size: 1.5rem;
+}
